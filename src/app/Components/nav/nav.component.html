@@ -1,0 +1,7 @@
+<nav class="shadow">
+  <h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Where in the world?</h2>
+  <div (click)="toggleTheme()" style="cursor: pointer;" >
+    <span class="fa" [ngClass]="(currentTheme$ | async) === Theme.dark ? 'fa-sun-o' : 'fa-moon-o'"></span>
+    <span>{{ (currentTheme$ | async) === Theme.dark ? 'Light Mode' : 'Dark Mode' }}</span>
+  </div>
+</nav>

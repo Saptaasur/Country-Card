@@ -1,0 +1,21 @@
+<div class="filter">
+    <div class="search" >
+        <span class="fa fa-search" style="cursor: pointer;"></span>
+        <input type="text"
+         placeholder="Search for a country..."
+         [(ngModel)]="SearchFilter" (change)="ChangeSearch()">
+         </div>
+
+    <div class="dropdown" style="cursor: pointer;">
+        <div class="dropdown-label" (click)="toggleOptions()">
+            <span>{{placeholder}}</span>
+            <span class="fa fa-chevron-down"></span>
+        </div>
+        <ul class="dropdown-options shadow" style="cursor: pointer;" *ngIf="showOption">
+            <li *ngFor="let option of regionOptions" (click)="select(option)" style="cursor: pointer;">
+                {{option}}
+            </li>
+        </ul>
+    </div>
+</div>
+

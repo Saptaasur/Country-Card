@@ -1,0 +1,7 @@
+<app-search (EventFilter)="getCountryFilter($event)" ></app-search>
+
+<div class="allCountre" style="cursor: pointer;">
+  <ng-container *ngFor="let countre of Countries">
+    <app-country-card [country]="countre"></app-country-card>
+  </ng-container>
+</div>

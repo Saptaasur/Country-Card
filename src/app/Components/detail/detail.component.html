@@ -1,0 +1,63 @@
+<div *ngIf="country" class="country">
+    <button [routerLink]="''" class="button shadow">
+        <span class="fa fa-arrow-left"></span>
+        Back
+    </button>
+
+ <div class="country-layout">
+    <img [src]="country.flag" alt="no image">
+    <div class="country-detail">
+        <h2>{{country.name}}</h2>
+        <div class="country-info">
+            <div class="country-section">
+                <p>
+                    <strong>Native Name: </strong> 
+                   {{country.nativeName}}  </p>
+               <p>
+               <p>
+                   <strong>Population: </strong> 
+                   {{country.population |number : "1.0"}}  </p>
+               <p>
+               <p>
+                   <strong>Region: </strong> 
+                   {{country.region}}  </p>
+               <p>
+               <p>
+                   <strong>Sub Region: </strong> 
+                   {{country.subregion}}  </p>
+               <p>
+               <p>
+                   <strong>Capital: </strong> 
+                   {{country.capital}}  </p>
+               <p>
+            </div>
+
+            <div class="country-section">
+                <p>
+                    <strong>Top Level Domain: </strong> 
+                    {{country.topLevelDomain}}  </p>
+                <p>
+                <p>
+                    <strong>Currencies: </strong> 
+                    {{country.currencies[0].name}}  </p>
+                <p>
+                <p>
+                    <strong>Languages: </strong> 
+                    {{country.languages[0].name}}  </p>
+                <p>
+            </div>    
+        </div>
+        <div class="border-countries">
+            <p><strong>Border Countries</strong></p>
+            <div *ngIf="borderCountries" class="border-country-button">
+                <div *ngFor="let border of borderCountries" class="button shadow"
+                   [routerLink]="'/'+border.name"
+                >
+                    {{border.name}}
+                </div>
+            </div> 
+        </div>
+    </div>
+ </div>
+
+</div>

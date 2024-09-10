@@ -1,0 +1,82 @@
+.main{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin-inline:auto;
+}
+
+img{
+  height: 100%; 
+  width: 280px; 
+  border-radius: 15px 0px 0px 15px;
+  display: block;
+  object-fit: cover;
+}
+.text{
+  width: 100px;
+}
+.containerr {
+  border-radius: 0px 15px 15px 0px;
+  padding: 10px 30px;
+  background-color: white;
+  height: auto;
+}
+
+.title
+{
+  color: lightgray;
+  letter-spacing: 3px;
+}
+.big{
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 28px;
+}
+.pagra{
+  //color:lightgray;
+  font-family: 'Montserrat';
+  font-size: 13.5px;
+  font-weight: bold;
+  line-height: 22px;
+  color: gray;
+}
+.numb{
+  color: #388468;
+}
+.after{
+  font-size: 15px;
+  margin: 0px 0px 0px 20px;
+  text-decoration: line-through;
+  color: gray;
+}
+button{
+  background-color: #3d8168;
+  color: white;
+  //font-weight: bold;
+  padding: 13px 60px;
+  border-radius: 5px;
+  border: none;
+  display: inline-block;
+}
+button:hover{
+  background-color: #194131;
+  cursor: pointer;
+}
+button icon {
+  padding: 0px 20px;
+}
+@media only screen and (max-width:520px) {
+  .main {
+      flex-direction: column;
+      width: 320px; 
+  }
+  img{
+    height: 100%; 
+    width: 320px; 
+    border-radius: 15px 15px 0px 0px;
+  }
+  .containerr {
+    border-radius: 0px 0px 15px 15px;
+  }
+  
+}
